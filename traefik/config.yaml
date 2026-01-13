@@ -48,7 +48,7 @@ options:
     challenge_type: dnsChallenge
     provider: cloudflare
     delayBeforeCheck: 10
-    disablePropogationChecks: true
+    disablePropogationChecks: false
   env_vars: []
 schema:
   log_level: list(TRACE|DEBUG|INFO|WARN|ERROR|FATAL|PANIC)
