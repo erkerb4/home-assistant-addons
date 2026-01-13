@@ -64,6 +64,7 @@ schema:
     challenge_type: match(tlsChallenge|httpChallenge|dnsChallenge)?
     provider: str?
     delayBeforeCheck: int?
+    disablePropogationChecks: bool
     resolvers:
       - str?
   env_vars:
