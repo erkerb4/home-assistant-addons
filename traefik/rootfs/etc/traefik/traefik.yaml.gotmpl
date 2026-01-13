@@ -52,6 +52,10 @@ certificatesResolvers:
   {{- else if eq $options.letsencrypt.challenge_type "dnsChallenge" }}
       dnsChallenge:
         provider: {{ $options.letsencrypt.provider }}
+    {{- if has $options.letsencrypt "disablePropogationChecks" }}
+        propagation:
+          disableChecks: true
+    {{- end }}
     {{- if has $options.letsencrypt "delayBeforeCheck" }}
         delayBeforeCheck: {{ $options.letsencrypt.delayBeforeCheck }}
     {{- end }}
